@@ -42,14 +42,14 @@ labels = ('32', '64', '128')
 
 data = {
     '25B': {
-        'old': (28, 32, 32),
-        'nvidia': (14, 46, 52),
-        'new': (128, 384, 448),
+        'Old': (28, 32, 32),
+        'Nvidia': (14, 46, 52),
+        'New': (128, 384, 448),
     },
     '33B': {
-        'old': (36, 42, 42),
-        'nvidia': (26, 48, 52),
-        'new': (192, 448, 512),
+        'Old': (36, 42, 42),
+        'Nvidia': (26, 48, 52),
+        'New': (192, 448, 512),
     }
 }
 
@@ -65,13 +65,18 @@ x = np.arange(len(labels))
 width = 0.25
 multiplier = 0
 
+import scaling4science
+outdir = Path(scaling4science.__file__).parent.parent.joinpath('assets')
+print(f'Saving figures to: {outdir}')
+
 from scaling4science import COLORS
 colors = {
-    'old': COLORS['red'],
-    'nvidia': COLORS['green'],
-    'new': COLORS['blue']
+    'Old': COLORS['red'],
+    'Nvidia': COLORS['green'],
+    'New': COLORS['blue']
 }
 for model_size, d in data.items():
+    multiplier = 0
     fig, ax = plt.subplots(layout='constrained')
     for label, value in d.items():
         offset = width * multiplier
@@ -84,7 +89,6 @@ for model_size, d in data.items():
     ax.set_title(f'{model_size} Model', fontsize='large')
     ax.set_xticks(x + width, labels)
     ax.legend(loc='best', ncols=1, frameon=True)  # , bbox_to_anchor=(1.05, 1.0))
-    outdir = Path(os.getcwd()).parent.parent.joinpath('assets')
     # joinpath('seq-len-compare')
     save_figure(fig, fname=f'{model_size}', outdir=outdir)
     # fig.savefig()
