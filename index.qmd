@@ -108,12 +108,12 @@ format:
 DeepSpeed](https://github.com/microsoft/DeepSpeed) team to enable longer
 sequence lengths (context windows) for LLMs
 
-::: {#fig-ds4sci layout="[[1], [1,1]]" style="text-align:center;"}
+::: {#fig-ds4sci layout="[[1], [1,1]]" style="text-align:center; margin-top:-3rem;"}
 
-![](./assets/deepspeed4science.light.svg)
-![25B](./assets/25B.svg){width="42%"}
-$\hspace{40pt}$
-![33B](./assets/33B.svg){width="42%"}
+![](./assets/deepspeed4science.light.svg){width="100%"}
+![25B](./assets/25B.svg){width="44%"}
+$\hspace{30pt}$
+![33B](./assets/33B.svg){width="44%"}
 
 Maximum (achievable) `SEQ_LEN` for both `25B` and `33B` models
 :::
