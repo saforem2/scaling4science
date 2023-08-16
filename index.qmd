@@ -1,0 +1,124 @@
+---
+# title: "MLMC: Machine Learning Monte Carlo for Lattice Gauge Theory"
+# date: today
+# date-modified: last-modified
+# author-title: ""
+# affiliation-title: ""
+# published-title: ""
+# modified-title: ""
+# title-block-categories: false
+# number-sections: false
+# bibliography: references.bib
+# appendix-cite-as: display
+# favicon: "./assets/favicon.svg"
+# abstract: | 
+#   We present a trainable framework for efficiently generating gauge
+#   configurations, and discuss ongoing work in this direction. In particular, we
+#   consider the problem of sampling configurations from a 4D 𝑆𝑈(3) lattice gauge
+#   theory, and consider a generalized leapfrog integrator in the molecular
+#   dynamics update that can be trained to improve sampling efficiency.
+# author:
+#   - name: Sam Foreman
+#     url: https://samforeman.me
+#     orcid: 0000-0002-9981-0876
+#     email: foremans@anl.gov
+#     affiliation: Argonne National Laboratory
+#     affiliation-url: https://alcf.anl.gov/about/people/sam-foreman
+# citation:
+#   # type: speech
+#   # container-title: "Journal of Data Science Software"
+#   # doi: "10.23915/reprodocs.00010"
+#   # url: https://example.com/summarizing-output
+#    type: speech
+#    genre: "Presentation at the 2023 International Symposium on Lattice Field Theory"
+#    container-title: https://indico.fnal.gov/event/57249/contributions/271305/
+#    title: "MLMC: Machine Learning Monte Carlo for Lattice Gauge Theory"
+#    url: https://saforem2.github.io/lattice23
+# bibliography: biblio.bib 
+# google-analytics: G-XVM2Y822Y1
+#
+# author: "Sam Foreman"
+# date: today
+# bibliography: references.bib
+# title: "MLMC: Machine Learning Monte Carlo"
+# open-graph: true
+# repo-url: https://github.com/saforem2/climate-analysis
+# repo-actions: [edit, issue]
+format:
+  revealjs:
+    title-block-style: none
+    slide-number: c
+    title-slide-style: default
+    chalkboard:
+      buttons: false
+    auto-animate: true
+    reference-location: section
+    touch: true
+    pause: false
+    footnotes-hover: true
+    citations-hover: true
+    preview-links: true
+    controls-tutorial: true
+    controls: false
+    # logo: "./assets/logo.svg"
+    logo: "https://raw.githubusercontent.com/saforem2/anl-job-talk/main/docs/assets/anl.svg"
+    history: false
+    theme: [dark, css/dark.scss]
+    css: [css/default.css, css/callouts.css, css/code-callout.css]
+    self-contained: false
+    embed-resources: false
+    self-contained-math: false
+    center: true
+    highlight-style: "atom-one"
+    default-image-extension: svg
+    code-line-numbers: true
+    code-overflow: scroll
+    html-math-method: katex
+    fig-align: center
+    mermaid:
+      theme: dark
+---
+
+# {.title-slide .centeredslide}
+
+<!-- ::: {style="text-shadow: 0px 0px 10px RGBA(0, 0, 0, 0.45); background-color: rgba(22,22,22,0.33); border-radius: 10px; text-align:center; box-shadow:RGBA(0, 0, 0, 0.25) 0px 5px 15px; padding-top: 0.25em; padding-bottom: 0.25em;"} -->
+::: {style="background-color: #161616; border-radius: 10px; text-align:center; padding: 0px; padding-left: 1.5em; padding-right: 1.5em; max-width: min-content; min-width: max-content; margin-left: auto; margin-right: auto; padding-top: 0.2em; padding-bottom: 0.2em; line-height: 1.5em!important; box-shadow: RGBA(0, 0, 0, 0.25) 0px 5px 15px; border: 1px solid #E599F7;"}
+<span style="color:#939393; font-size:1.5em; font-weight: bold;">Scaling LLMs for Science</span>  
+<span style="color:#777777; font-size:1.2em; font-weight: bold;">(\& Ongoing Collaborations)</span>  
+[<br>&nbsp;]{style="padding-bottom: 0.5rem;"}  
+[{{< fa solid home >}}](https://samforeman.me) Sam Foreman  
+[Venkat Vishwanath]{.dim-text style="font-size:0.8em;"}  
+&nbsp;<br>
+
+[[[{{< fa brands github >}} `saforem2/`](https://github.com/saforem2/)]{style="border-bottom: 0.5px solid #00ccff;"}`{`[[`scaling4science`](https://github.com/saforem2/lattice23)]{style="border-bottom: 0.5px solid #00ccff;"}, [[`Megatron-DS-Benchmarking`](https://github.com/saforem2/l2hmc-qcd)]{style="border-bottom: 0.5px solid #00ccff;"}`}`]{style="font-size:0.6em;"}
+
+:::
+
+::: footer
+
+[2023-08-18 @ [Data-Intensive Computing \& AI/ML Apps @ Scale](https://events.cels.anl.gov/event/426/)]{.dim-text style="text-align:left;'}
+
+:::
+
+
+<!-- # Looooooooooooooong `SEQ_LEN` -->
+# Loooong Sequence Lengths {style="height:100%; font-size:0.9em;" auto-animate=true}
+
+- Working with [{{< fa brands microsoft >}} Microsoft
+DeepSpeed](https://github.com/microsoft/DeepSpeed) team to enable longer
+sequence lengths (context windows) for LLMs
+
+::: {#fig-ds4sci layout="[[1], [1,1]]" style="text-align:center;"}
+
+![](./assets/deepspeed4science.light.svg)
+![25B](./assets/25B.svg){width="42%"}
+$\hspace{40pt}$
+![33B](./assets/33B.svg){width="42%"}
+
+Maximum (achievable) `SEQ_LEN` for both `25B` and `33B` models
+:::
+
+::: footer
+[[{{< fa brands github >}} `microsoft/DeepSpeed-Megatron`](https://github.com/microsoft/DeepSpeed-Megatron)]{style="border-bottom: 0.5px solid #00ccff;"}
+<!-- [{{< fa brands github >}} `saforem2/lattice23`](https://saforem2.github.io/lattice23) -->
+:::
