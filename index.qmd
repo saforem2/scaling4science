@@ -1,49 +1,4 @@
 ---
-# title: "MLMC: Machine Learning Monte Carlo for Lattice Gauge Theory"
-# date: today
-# date-modified: last-modified
-# author-title: ""
-# affiliation-title: ""
-# published-title: ""
-# modified-title: ""
-# title-block-categories: false
-# number-sections: false
-# bibliography: references.bib
-# appendix-cite-as: display
-# favicon: "./assets/favicon.svg"
-# abstract: | 
-#   We present a trainable framework for efficiently generating gauge
-#   configurations, and discuss ongoing work in this direction. In particular, we
-#   consider the problem of sampling configurations from a 4D 𝑆𝑈(3) lattice gauge
-#   theory, and consider a generalized leapfrog integrator in the molecular
-#   dynamics update that can be trained to improve sampling efficiency.
-# author:
-#   - name: Sam Foreman
-#     url: https://samforeman.me
-#     orcid: 0000-0002-9981-0876
-#     email: foremans@anl.gov
-#     affiliation: Argonne National Laboratory
-#     affiliation-url: https://alcf.anl.gov/about/people/sam-foreman
-# citation:
-#   # type: speech
-#   # container-title: "Journal of Data Science Software"
-#   # doi: "10.23915/reprodocs.00010"
-#   # url: https://example.com/summarizing-output
-#    type: speech
-#    genre: "Presentation at the 2023 International Symposium on Lattice Field Theory"
-#    container-title: https://indico.fnal.gov/event/57249/contributions/271305/
-#    title: "MLMC: Machine Learning Monte Carlo for Lattice Gauge Theory"
-#    url: https://saforem2.github.io/lattice23
-# bibliography: biblio.bib 
-# google-analytics: G-XVM2Y822Y1
-#
-# author: "Sam Foreman"
-# date: today
-# bibliography: references.bib
-# title: "MLMC: Machine Learning Monte Carlo"
-# open-graph: true
-# repo-url: https://github.com/saforem2/climate-analysis
-# repo-actions: [edit, issue]
 format:
   revealjs:
     title-block-style: none
@@ -79,10 +34,10 @@ format:
       theme: dark
 ---
 
-# {.title-slide .centeredslide}
+# {.title-slide .centeredslide style="display: flex; flex-direction: column; align-items: center; justify-content: center;"}
 
-<!-- ::: {style="text-shadow: 0px 0px 10px RGBA(0, 0, 0, 0.45); background-color: rgba(22,22,22,0.33); border-radius: 10px; text-align:center; box-shadow:RGBA(0, 0, 0, 0.25) 0px 5px 15px; padding-top: 0.25em; padding-bottom: 0.25em;"} -->
-::: {style="background-color: #161616; border-radius: 10px; text-align:center; padding: 0px; padding-left: 1.5em; padding-right: 1.5em; max-width: min-content; min-width: max-content; margin-left: auto; margin-right: auto; padding-top: 0.2em; padding-bottom: 0.2em; line-height: 1.5em!important; box-shadow: RGBA(0, 0, 0, 0.25) 0px 5px 15px; border: 1px solid #E599F7;"}
+::: {.dark-card }
+
 <span style="color:#939393; font-size:1.5em; font-weight: bold;">Scaling LLMs for Science</span>  
 <span style="color:#777777; font-size:1.2em; font-weight: bold;">(\& Ongoing Collaborations)</span>  
 [<br>&nbsp;]{style="padding-bottom: 0.5rem;"}  
@@ -90,7 +45,7 @@ format:
 [Venkat Vishwanath]{.dim-text style="font-size:0.8em;"}  
 &nbsp;<br>
 
-[[[{{< fa brands github >}} `saforem2/`](https://github.com/saforem2/)]{style="border-bottom: 0.5px solid #00ccff;"}`{`[[`scaling4science`](https://github.com/saforem2/lattice23)]{style="border-bottom: 0.5px solid #00ccff;"}, [[`Megatron-DS-Benchmarking`](https://github.com/saforem2/l2hmc-qcd)]{style="border-bottom: 0.5px solid #00ccff;"}`}`]{style="font-size:0.6em;"}
+[[[{{< fa brands github >}} `saforem2/`](https://github.com/saforem2/)]{style="border-bottom: 0.5px solid #00ccff;"}`{`[[`scaling4science`](https://github.com/saforem2/scaling4science)]{style="border-bottom: 0.5px solid #00ccff;"}, [[`Megatron-DS-Benchmarking`](https://github.com/saforem2/Megatron-DS-Benchmarking)]{style="border-bottom: 0.5px solid #00ccff;"}`}`]{style="font-size:0.6em;"}
 
 :::
 
@@ -101,8 +56,7 @@ format:
 :::
 
 
-<!-- # Looooooooooooooong `SEQ_LEN` -->
-# Loooong Sequence Lengths {style="height:100%; font-size:0.9em;" auto-animate=true}
+# Loooooooooong Sequence Lengths {style="height:100%; font-size:0.9em;" auto-animate=true}
 
 - Working with [{{< fa brands microsoft >}} Microsoft
 DeepSpeed](https://github.com/microsoft/DeepSpeed) team to enable longer
@@ -119,6 +73,125 @@ Maximum (achievable) `SEQ_LEN` for both `25B` and `33B` models
 :::
 
 ::: footer
-[[{{< fa brands github >}} `microsoft/DeepSpeed-Megatron`](https://github.com/microsoft/DeepSpeed-Megatron)]{style="border-bottom: 0.5px solid #00ccff;"}
-<!-- [{{< fa brands github >}} `saforem2/lattice23`](https://saforem2.github.io/lattice23) -->
+
+::: {style="text-align:inherit"}
+
+[[[{{< fa brands github >}} `saforem2/`](https://github.com/saforem2/)]{style="border-bottom: 0.5px solid #00ccff;"}`{`[[`scaling4science`](https://github.com/saforem2/scaling4science)]{style="border-bottom: 0.5px solid #00ccff;"}, [[`Megatron-DS-Benchmarking`](https://github.com/saforem2/l2hmc-qcd)]{style="border-bottom: 0.5px solid #00ccff;"}`}`]{style="text-align:left;"}
+$\hspace{40pt}$
+[[{{< fa brands github >}} `microsoft/DeepSpeed-Megatron`](https://github.com/microsoft/DeepSpeed-Megatron)]{style="border-bottom: 0.5px solid #00ccff; text-align: right;"}
+
+:::
+
+
+:::
+
+
+# [Ongoing Work]{style="color: #1c1c1c"} {.centeredslide background-color=#FCFCFC style="color: #333333;"}
+
+::::::::::::::::::: {.columns}
+
+:::::: {.column width="50%"}
+
+::::: {.callout-note title="Scaling LLMs" collapse=false width="100%" style="background-color: #FFFFFF;"}
+
+- [{{< fa brands github >}} `saforem2/Megatron-DS-Benchmarking`](https://github.com/saforem2/scaling4science)
+
+:::::
+
+
+::::: {.callout-important title="Climate Modeling" collapse=false style="background-color: #FFFFFF;"}
+
+- ViT for Climate Models [WIP]
+
+- [ClimRR: Climate Risk \& Resiliency Portal](https://disgeoportal.egs.anl.gov/ClimRR/)
+
+::: {.r-stack style="text-align:center;"}
+[![](./assets/globe_specific_hum_wind.gif){width="70%"}]{}
+
+[![](./assets/forecast1.png)]{.fragment width="100%" style="margin-top: 1em;"}
+
+[![](./assets/forecast2.png)]{.fragment width="100%" style="margin-top: 2em;"}
+
+[![](./assets/forecast3.png)]{.fragment width="100%" style="margin-top: 2em;"}
+
+[![](./assets/forecast-2-1.png)]{.fragment width="100%" style="margin-top: 2em;"}
+
+[![](./assets/forecast-2-2.png)]{.fragment width="100%" style="margin-top: 2em;"}
+
+[![](./assets/forecast-2-3.png)]{.fragment width="100%" style="margin-top: 2em;"}
+
+[![](./assets/climate-talk.png)]{.fragment width="100%" style="margin-top: 2em;"}
+
+
+:::
+
+:::::
+
+::::::
+
+:::::: {.column width="50%"}
+
+::: {.callout-tip title="Lattice QCD" collapse=false style="width:100%!important;"}
+
+- [![](https://raw.githubusercontent.com/saforem2/l2hmc-qcd/main/assets/logo-small.svg){style="height:3.92rem; margin:unset;"}](https://saforem2.github.io/l2hmc-qcd)
+  - [{{< fa brands github >}} `saforem2/l2hmc-qcd`](https://github.com/saforem2/l2hmc-qcd)
+
+- [MLMC @ Lattice 23](https://saforem2.github.io/lattice23)
+  - [{{< fa brands github >}} `saforem2/lattice23`](https://github.com/saforem2/lattice23)
+- [LQCD @ PASC 23](https://saforem2.github.io/lqcd-pasc23)
+  - [{{< fa brands github >}} `saforem2/lqcd-pasc23`](https://github.com/saforem2/lattice23)
+
+
+
+![](https://saforem2.github.io/lattice23/assets/SU3/logdet_ridgeplot2.svg){width="90%" style="margin-top: -1rem;"}
+
+:::
+
+::::::
+
+:::::::::::::::::::
+
+
+::: footer
+
+::: {style="text-align:inherit; color: #222222;"}
+
+[[[{{< fa brands github >}} `saforem2/`](https://github.com/saforem2/)]{style="border-bottom: 0.5px solid #29B6F6; color: #F06292!important;"}`{`[[`scaling4science`](https://github.com/saforem2/scaling4science)]{style="border-bottom: 0.5px solid #29B6F6;"}, [[`l2hmc-qcd`](https://github.com/saforem2/l2hmc-qcd)]{style="border-bottom: 0.5px solid #29B6F6;"}`}`]{style="text-align:left;"}
+:::
+
+:::
+
+# Acknowledgements
+
+- [{{< fa solid link >}} Link to slides](https://saforem2.github.io/scaling4science/)
+
+- Huge shout out to:
+
+  :::: {.columns}
+
+  ::: {.column width="50%"}
+
+  - Venkat Vishwanath
+  - James Osborn
+  - Xiao-Yong Jin
+  - Rao Kotamarthi
+  - Romit Maulik
+
+  :::
+
+  ::: {.column width="50%"}
+
+  - Troy Arcomano
+  - Microsoft DeepSpeed Team
+  - ALCF Data Science Team (**everyone**!)
+    - ALCF Staff (Ops, Performance, Software, User Support / Documentation, ...)
+
+  :::
+
+  ::::
+
+
+::: {.callout-note title="Acknowledgements"}
+This research used resources of the Argonne Leadership Computing Facility,  
+which is a DOE Office of Science User Facility supported under Contract DE-AC02-06CH11357.
 :::
