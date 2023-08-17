@@ -86,7 +86,7 @@ $\hspace{40pt}$
 :::
 
 
-# [Ongoing Work]{style="color: #1c1c1c"} {.centeredslide background-color=#FCFCFC style="color: #333333;"}
+# [Ongoing Work \& Collaborations]{style="color: #1c1c1c"} {.centeredslide background-color=#FCFCFC style="color: #333333;"}
 
 ::::::::::::::::::: {.columns}
 
