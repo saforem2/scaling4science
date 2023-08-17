@@ -101,7 +101,7 @@ $\hspace{40pt}$
 
 ::::: {.callout-important title="Climate Modeling" collapse=false style="background-color: #FFFFFF;"}
 
-- ViT for Climate Models [WIP]
+- ViT for Climate Models [[WIP]}{.red-text}
 
 - [ClimRR: Climate Risk \& Resiliency Portal](https://disgeoportal.egs.anl.gov/ClimRR/)
 
@@ -183,7 +183,7 @@ $\hspace{40pt}$
 
   - Troy Arcomano
   - Microsoft DeepSpeed Team
-  - ALCF Data Science Team (**everyone**!)
+  - ALCF Data Science Team ([**everyone**]{.green-text}!)
     - ALCF Staff (Ops, Performance, Software, User Support / Documentation, ...)
 
   :::
