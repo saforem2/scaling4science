@@ -15,7 +15,7 @@ title-block-categories: false
 number-sections: false
 bibliography: references.bib
 appendix-cite-as: display
-favicon: "assets/favicon.svg"
+favicon: "./assets/favicon.svg"
 google-scholar: true
 google-analytics: G-XVM2Y822Y1
 author:
@@ -32,6 +32,8 @@ citation:
    container-title: https://events.cels.anl.gov/event/426/
    title: "Scaling LLMs for Science and Ongoing Collaborations"
    url: https://saforem2.github.io/scaling4science
+website:
+  favicon: "./assets/favicon.svg"
 # website:
 #   twitter-card:
 #     site: "@saforem2"
