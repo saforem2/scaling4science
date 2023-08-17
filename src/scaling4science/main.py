@@ -22,10 +22,19 @@ set_plot_style()
 
 import os
 import datetime
-from typing import Tuple
+import scaling4science
+
 from pathlib import Path
 
-def save_figure(fig: plt.Figure, fname: str, outdir: os.PathLike):
+import seaborn as sns
+
+sns.set_context('talk')
+set_plot_style()
+
+def save_figure(
+        fname: str,
+        outdir: os.PathLike,
+):
     pngdir = Path(outdir).joinpath('pngs')
     svgdir = Path(outdir).joinpath('svgs')
     pngdir.mkdir(exist_ok=True, parents=True)
@@ -33,8 +42,8 @@ def save_figure(fig: plt.Figure, fname: str, outdir: os.PathLike):
     pngfile = pngdir.joinpath(f'{fname}.png')
     svgfile = svgdir.joinpath(f'{fname}.svg')
     print(f'Saving figures to: {outdir}' + '/{pngs,svgs}/' + f'{fname}*')
-    _ = fig.savefig(pngfile, dpi=400, bbox_inches='tight')
-    _ = fig.savefig(svgfile, dpi=400, bbox_inches='tight')
+    _ = plt.savefig(pngfile, dpi=400, bbox_inches='tight')
+    _ = plt.savefig(svgfile, dpi=400, bbox_inches='tight')
 
 #|%%--%%| <C7cavSj0Vg|vlqbbwT8cM>
 
@@ -53,20 +62,15 @@ data = {
     }
 }
 
-#|%%--%%| <vlqbbwT8cM|asFb2CykS8>
-
-import seaborn as sns
-sns.set_context('talk')
-set_plot_style()
-
-#|%%--%%| <asFb2CykS8|duhZuxvxVz>
+#|%%--%%| <vlqbbwT8cM|duhZuxvxVz>
 
 x = np.arange(len(labels))
 width = 0.25
 multiplier = 0
 
-import scaling4science
-outdir = Path(scaling4science.__file__).parent.parent.joinpath('assets')
+outdir = Path(
+    scaling4science.__file__
+).parent.parent.parent.joinpath('assets')
 print(f'Saving figures to: {outdir}')
 
 from scaling4science import COLORS
@@ -77,7 +81,9 @@ colors = {
 }
 for model_size, d in data.items():
     multiplier = 0
-    fig, ax = plt.subplots(layout='constrained')
+    figure, axes = plt.subplots(layout='constrained')
+    fig = plt.gcf()
+    ax = plt.gca()
     for label, value in d.items():
         offset = width * multiplier
         rects = ax.bar(x + offset, value, width, label=label, color=colors[label])
@@ -90,7 +96,7 @@ for model_size, d in data.items():
     ax.set_xticks(x + width, labels)
     ax.legend(loc='best', ncols=1, frameon=True)  # , bbox_to_anchor=(1.05, 1.0))
     # joinpath('seq-len-compare')
-    save_figure(fig, fname=f'{model_size}', outdir=outdir)
+    save_figure(fname=f'{model_size}', outdir=outdir)
     # fig.savefig()
     plt.show()
 
