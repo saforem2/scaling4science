@@ -51,7 +51,7 @@ format:
 
 ::: footer
 
-[2023-08-18 @ [Data-Intensive Computing \& AI/ML Apps @ Scale](https://events.cels.anl.gov/event/426/)]{.dim-text style="text-align:left;'}
+[2023-08-17 @ [Data-Intensive Computing \& AI/ML Apps @ Scale](https://events.cels.anl.gov/event/426/)]{.dim-text style="text-align:left;'}
 
 :::
 
@@ -69,7 +69,7 @@ sequence lengths (context windows) for LLMs
 $\hspace{30pt}$
 ![33B](./assets/33B.svg){width="44%"}
 
-Maximum (achievable) `SEQ_LEN` for both `25B` and `33B` models
+Maximum (achievable) `SEQ_LEN` for both `25B` and `33B` models [$[$WIP$]$]{.red-text} 
 :::
 
 ::: footer
@@ -161,11 +161,11 @@ $\hspace{40pt}$
 
 :::
 
-# Acknowledgements
+# Thank you!
 
 - [{{< fa solid link >}} Link to slides](https://saforem2.github.io/scaling4science/)
 
-- Huge shout out to:
+- Huge shout out to [{{< fa solid bullhorn >}}]{.red-text}
 
   :::: {.columns}
 
