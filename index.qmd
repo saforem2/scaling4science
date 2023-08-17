@@ -101,7 +101,7 @@ $\hspace{40pt}$
 
 ::::: {.callout-important title="Climate Modeling" collapse=false style="background-color: #FFFFFF;"}
 
-- ViT for Climate Models [[WIP]}{.red-text}
+- ViT for Climate Models [[WIP]]{.red-text}
 
 - [ClimRR: Climate Risk \& Resiliency Portal](https://disgeoportal.egs.anl.gov/ClimRR/)
 
